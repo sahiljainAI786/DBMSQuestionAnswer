@@ -223,68 +223,60 @@ def answer():
     #print(email)
     # data = json.loads(json_string)
     #print(ques)       
-    healthcare_words = ["medications","drugs", "pills", "DNA", "RNA", "Sequence", "Sequencing", "tablets", "prescriptions", 
-                        "dosages","diabetes", "Genome Sequencing","cancer", "heart disease","covid-19","covid", "asthma","genomics", 
-                        "arthritis","disease", "Alzheimer's disease", "Parkinson's disease", "mental health conditions",
-                        "infectious diseases","doctors", "nurses", "pharmacists", "surgeons", 'therapists', 'chiropractors', 
-                        "acupuncturists", 'midwives',"hospitals", "clinics", "urgent care centers","rehabilitation centers", 
-                        "nursing homes", "hospices", "home health agencies", "policies", "premiums", "deductibles", "copays", 
-                        "coverage", "claims", "network","providers","fitness", "nutrition", "weight loss", "smoking cessation",
-                        "stress management", "sleep", "mental health", "addiction treatment","blood pressure monitors",
-                        "glucose meters", "prosthetics", "hearing aids", "wheelchairs", "crutches", "braces", "inhalers",
-                        "surgeries", "diagnostic tests", "imaging studies", "biopsies", "vaccinations","screenings", "check-ups",
-                        "disease prevention", "vaccination campaigns", "epidemiology", "health promotion", "health policy",
-                        "disaster preparedness","electronic health records", "telemedicine", "health apps", "wearable devices",
-                        "AI in healthcare","double helix", "nucleotide", "gene","genetic","genetics", "chromosome", "base pair","genome sequence",
-                        "mutation", "genetic code", "genetic variation","gene expression", "genetic mapping", "epigenetics",
-                        "transcriptomics", "proteomics", "metabolomics","cystic fibrosis", "sickle cell anemia",
-                        "Huntington's disease", "muscular dystrophy", "Down syndrome", "hemophilia", "thalassemia","CRISPR",
-                        "gene therapy","genome engineering", "targeted gene editing","pharmacogenomics", "genetic testing",
-                        "genetic counseling", "precision medicine", "gene-based diagnosis","gene-based therapy",
-                        "population genetics", "evolutionary genetics", "molecular genetics", "comparative genomics",
-                        "functional genomics","genetic engineering","synthetic biology", "gene synthesis", "gene cloning",
-                        "genetic modification", "recombinant DNA technology","genetic discrimination", "privacy concerns",
-                        "informed consent", "gene patenting", "intellectual property rights", "genetically modified organisms",
-                        "whole genome sequencing", "targeted sequencing","high-throughput sequencing","nanopore sequencing",
-                        "agriculture and livestock breeding", "forensic science", "paleogenomics","next-generation sequencing",
-                        "conservation biology", "ancestry testing", "evolutionary biology", "Tay-Sachs disease", "bioinformatics",
-                        "side effects", "interactions", "diseases", "providers","facilities", "insurance", "wellness", "equipment",
-                        "procedures", "public health", "technology","radiology","ophthalmology", "oncology", "cardiology",
-                        "orthopedics","gynecology", "pediatrics", "endocrinology", "dermatology", "immunology","urology",
-                        "neurosurgery", "Reproductive Health", "Primary Care","gastroenterology","pathology", "bioethics",
-                        "performance indicators", "psychiatry", "pain management", "health outcomes", "medical ethics",
-                        "patient education", "healthcare financing", "home care","iot in healthcare", "healthcare administration",
-                        "ambulance services", "medical laboratory", "disease management", "allergies and immunotherapy",
-                        "cosmetic medicine", "robotic surgery", "healthcare startups", "intensive care units","health equity",
-                        "artificial intelligence diagnosis", "data privacy in healthcare","medical billing","preventive care",
-                        "healthcare delivery models", "nanotechnology in medicine", "blockchain in healthcare","ambulatory care",
-                        "3D printing in healthcare", "healthcare supply chain","immunizations", "mental health counseling",
-                        "dental care", "eye care", "audiology", "occupational therapy", "physical therapy", "speech therapy",
-                        "holistic medicine", "alternative medicine", "medical research", "medical education", "clinical trials",
-                        "healthcare regulation", "patient safety", "informed consent","patient satisfaction","aging population",
-                        "chronic illnesses", "global health", "health disparities", "managed care", "medical devices",
-                        "accounta   ble care organizations","pharmacy benefits","palliative care","telehealth","healthcare analytics", 
-                        "remote monitoring", "point of care testing", "health informatics","population health management",
-                        "symptoms","more","additional","fever","Extra","Further","Added","Excess","Plus","Augmented","Extended",
-                        "Advanced","Enhanced","hello","hi", "stakeholder", "heart attack", "healthcare", "medicine",
-                        "market expansion", "WHO","PRC","Transcriptome","gender","protein","disabilities","ai","usa","health","omada","time","cgm","members","participant", "ageing", "biological", "forge", "forge biologics", "driver",
-                        "growth","software", "clinical","materials","revenue", "Researchers"]
+    #healthcare_words = ["medications","drugs", "pills", "DNA", "RNA", "Sequence", "Sequencing", "tablets", "prescriptions", 
+                        # "dosages","diabetes", "Genome Sequencing","cancer", "heart disease","covid-19","covid", "asthma","genomics", 
+                        # "arthritis","disease", "Alzheimer's disease", "Parkinson's disease", "mental health conditions",
+                        # "infectious diseases","doctors", "nurses", "pharmacists", "surgeons", 'therapists', 'chiropractors', 
+                        # "acupuncturists", 'midwives',"hospitals", "clinics", "urgent care centers","rehabilitation centers", 
+                        # "nursing homes", "hospices", "home health agencies", "policies", "premiums", "deductibles", "copays", 
+                        # "coverage", "claims", "network","providers","fitness", "nutrition", "weight loss", "smoking cessation",
+                        # "stress management", "sleep", "mental health", "addiction treatment","blood pressure monitors",
+                        # "glucose meters", "prosthetics", "hearing aids", "wheelchairs", "crutches", "braces", "inhalers",
+                        # "surgeries", "diagnostic tests", "imaging studies", "biopsies", "vaccinations","screenings", "check-ups",
+                        # "disease prevention", "vaccination campaigns", "epidemiology", "health promotion", "health policy",
+                        # "disaster preparedness","electronic health records", "telemedicine", "health apps", "wearable devices",
+                        # "AI in healthcare","double helix", "nucleotide", "gene","genetic","genetics", "chromosome", "base pair","genome sequence",
+                        # "mutation", "genetic code", "genetic variation","gene expression", "genetic mapping", "epigenetics",
+                        # "transcriptomics", "proteomics", "metabolomics","cystic fibrosis", "sickle cell anemia",
+                        # "Huntington's disease", "muscular dystrophy", "Down syndrome", "hemophilia", "thalassemia","CRISPR",
+                        # "gene therapy","genome engineering", "targeted gene editing","pharmacogenomics", "genetic testing",
+                        # "genetic counseling", "precision medicine", "gene-based diagnosis","gene-based therapy",
+                        # "population genetics", "evolutionary genetics", "molecular genetics", "comparative genomics",
+                        # "functional genomics","genetic engineering","synthetic biology", "gene synthesis", "gene cloning",
+                        # "genetic modification", "recombinant DNA technology","genetic discrimination", "privacy concerns",
+                        # "informed consent", "gene patenting", "intellectual property rights", "genetically modified organisms",
+                        # "whole genome sequencing", "targeted sequencing","high-throughput sequencing","nanopore sequencing",
+                        # "agriculture and livestock breeding", "forensic science", "paleogenomics","next-generation sequencing",
+                        # "conservation biology", "ancestry testing", "evolutionary biology", "Tay-Sachs disease", "bioinformatics",
+                        # "side effects", "interactions", "diseases", "providers","facilities", "insurance", "wellness", "equipment",
+                        # "procedures", "public health", "technology","radiology","ophthalmology", "oncology", "cardiology",
+                        # "orthopedics","gynecology", "pediatrics", "endocrinology", "dermatology", "immunology","urology",
+                        # "neurosurgery", "Reproductive Health", "Primary Care","gastroenterology","pathology", "bioethics",
+                        # "performance indicators", "psychiatry", "pain management", "health outcomes", "medical ethics",
+                        # "patient education", "healthcare financing", "home care","iot in healthcare", "healthcare administration",
+                        # "ambulance services", "medical laboratory", "disease management", "allergies and immunotherapy",
+                        # "cosmetic medicine", "robotic surgery", "healthcare startups", "intensive care units","health equity",
+                        # "artificial intelligence diagnosis", "data privacy in healthcare","medical billing","preventive care",
+                        # "healthcare delivery models", "nanotechnology in medicine", "blockchain in healthcare","ambulatory care",
+                        # "3D printing in healthcare", "healthcare supply chain","immunizations", "mental health counseling",
+                        # "dental care", "eye care", "audiology", "occupational therapy", "physical therapy", "speech therapy",
+                        # "holistic medicine", "alternative medicine", "medical research", "medical education", "clinical trials",
+                        # "healthcare regulation", "patient safety", "informed consent","patient satisfaction","aging population",
+                        # "chronic illnesses", "global health", "health disparities", "managed care", "medical devices",
+                        # "accounta   ble care organizations","pharmacy benefits","palliative care","telehealth","healthcare analytics", 
+                        # "remote monitoring", "point of care testing", "health informatics","population health management",
+                        # "symptoms","more","additional","fever","Extra","Further","Added","Excess","Plus","Augmented","Extended",
+                        # "Advanced","Enhanced","hello","hi", "stakeholder", "heart attack", "healthcare", "medicine",
+                        # "market expansion", "WHO","PRC","Transcriptome","gender","protein","disabilities","ai","usa","health","omada","time","cgm","members","participant", "ageing", "biological", "forge", "forge biologics", "driver",
+                        # "growth","software", "clinical","materials","revenue", "Researchers"]
 
     def is_healthcare_question(question):
-        # question = question.lower()
-        # for word in healthcare_words:
-        #     pattern = r'\b{}\b'.format(re.escape(word.lower()))
-        #     if re.search(pattern, question):
-        #         return True
         return True
 
     user_input = ques
 
 
     def check_pdf_ans(answer, lst):
-        # for n in lst:
-        #     if n in answer:
-        #         return False
         return True 
     
 
